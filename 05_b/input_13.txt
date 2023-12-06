@@ -1,0 +1,5 @@
+seeds: 99 1000
+
+seed-to-location map:
+50 98 2
+52 50 48
