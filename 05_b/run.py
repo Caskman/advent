@@ -165,7 +165,6 @@ if __name__ == "__main__":
         if os.path.isfile(f) and f.startswith("input"):
             marker = int(f.split(".")[0].split("_")[1])
             case_markers.append(marker)
-    # case_markers = ["1"]
     
     for marker in sorted(case_markers):
         answer_path = f"answer_{marker}.txt"
