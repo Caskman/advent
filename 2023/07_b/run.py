@@ -37,12 +37,10 @@ class Solution:
         elif top_count == 4:
             return 5
         elif self.full_house(counts, jokers):
-        # elif counts[0] == 3 and counts[1] == 2:
             return 4
         elif top_count == 3:
             return 3
         elif self.two_pair(counts, jokers):
-        # elif counts[0] == 2 and counts[1] == 2:
             return 2
         elif top_count == 2:
             return 1
