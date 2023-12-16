@@ -28,13 +28,13 @@ class Solution:
 
         def empty(spring_index, group_index, group_count):
 
-            if group_count > -1:
+            if group_count:
                 # finished group isn't big enough
                 if group_count != groups[group_index]:
                     return 0
                 # right size, continue on
                 else:
-                    return backtrack(spring_index + 1, group_index + 1, -1)
+                    return backtrack(spring_index + 1, group_index + 1, 0)
             # continuing empty space
             else:
                 return backtrack(spring_index + 1, group_index, group_count)
@@ -44,7 +44,7 @@ class Solution:
             if group_index >= G:
                 return 0
             # If continuing existing group
-            if group_count > -1:
+            if group_count:
                 return backtrack(spring_index + 1, group_index, group_count + 1)
             # starting new group
             else:
@@ -78,7 +78,7 @@ class Solution:
                 acc += spring(spring_index, group_index, group_count)
                 return acc
             
-        return backtrack(0, 0, -1)
+        return backtrack(0, 0, 0)
 
 
     def run(self, fin):
